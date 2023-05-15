@@ -2,6 +2,7 @@
 
 /**
  * Route to get the details of a superhero
+ * @secure
  */
 Tina4\Get::add("/superhero/{id}", function($id, Tina4\Response $response, \Tina4\Request $request){
 
@@ -10,5 +11,5 @@ Tina4\Get::add("/superhero/{id}", function($id, Tina4\Response $response, \Tina4
 
     $result = "I am " . $superHero["firstName"] . " ". $superHero["lastName"];
 
-    return $response($result, HTTP_OK, TEXT_HTML);
+    return $response(\Tina4\renderTemplate("superhero.twig",["superhero" => $superHero]), HTTP_OK, TEXT_HTML);
 });

@@ -1,6 +1,13 @@
 {
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/crishigham/mod-login"
+        }
+    ],
     "require": {
-        "tina4stack/tina4php": "^2.0"
+        "tina4stack/tina4php": "dev-master",
+        "tina4components/mod-login": "dev-master"
     },
     "scripts": {
         "tina4": "tina4",
@@ -15,7 +22,8 @@
         "src/*",
         "src/app/*",
         "src/orm/*",
-        "src/routes/*"
+        "src/routes/*",
+        "src/modules/*"
     ],
     "autoload": {
         "psr-4": {
@@ -23,7 +31,8 @@
                 "src/",
                 "src/app/",
                 "src/orm/",
-                "src/routes"
+                "src/routes",
+                "src/modules"
             ]
         }
     },

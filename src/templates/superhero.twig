@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+{% block content %}
+<div style="border-style: solid">
+    <div>
+        <h3>{{ superhero.aka }}</h3>
+    </div>
+    <div>
+        <img src="" alt="image placeholder" width="100px" height="100px">
+    </div>
+    <div>
+        First Name: {{ superhero.firstName }}
+    </div>
+    <div>
+        Surname: {{ superhero.lastName }}
+    </div>
+</div>
+{% endblock %}
